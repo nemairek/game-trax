@@ -13,7 +13,7 @@ const morgan = require("morgan");
 const port = process.env.PORT ? process.env.PORT : "3000";
 
 const authController = require("./controllers/auth.js");
-const gamesController = require('./controllers/games.js');
+const gamesController = require('./controllers/game')
 
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -40,8 +40,13 @@ app.get("/", async (req,res) => {
     res.render("index.ejs", { user: req.session.user })
 })
 
+
+
 app.use("/auth", authController);
-app.use('/games', gamesController);
+
+app.use('/game', gamesController)
+
+
 
 
 app.listen(port, () => {
