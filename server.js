@@ -14,7 +14,8 @@ const port = process.env.PORT ? process.env.PORT : "3000";
 
 const authController = require("./controllers/auth.js");
 const gamesController = require('./controllers/game')
-
+const isSignedIn = require('./middleware/is-signed-in.js');
+const passUserToView = require('./middleware/pass-user-to-view.js');
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -43,9 +44,9 @@ app.get("/", async (req,res) => {
 })
 
 
-
+app.use(passUserToView)
 app.use("/auth", authController);
-
+app.use(isSignedIn);
 app.use('/game', gamesController)
 
 

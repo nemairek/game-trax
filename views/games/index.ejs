@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1>Games</h1>
     <ul>
     <% games.forEach(game => {%>
@@ -16,8 +17,9 @@
             <%= game.publishedYear %>
             <%= game.status %>
             <a href="/game/<%= game._id %>">View more details.</a>
-            <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
+            <form action="/game/<%= game._id %>?_method=DELETE" method="POST">
                 <button type="submit">Delete Game</button>
+            </form>
         </li>
        
    <% }); %>

@@ -10,7 +10,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit the Game!</h1>
-    <form action="/games/<%= game._id %>?_method=PUT" method="POST">
+    <form action="/game/<%= game._id %>?_method=PUT" method="POST">
         <label for="name">Name:</label>
         <input  type="text"  name="name" id="name" />
         <label for="genre">Genre:</label>

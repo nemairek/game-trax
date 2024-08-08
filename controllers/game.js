@@ -11,7 +11,6 @@ router.get("/", async (req, res) => {
 const ownerId = req.session.user._id;
 let gamesArray = await Game.find({ owner: ownerId }).populate('owner')
 console.log(gamesArray)
-console.log(req.query)
     res.render("games/index.ejs", {
         games: gamesArray
     })
@@ -44,10 +43,11 @@ router.get('/:gameId', async (req, res) => {
 
   router.delete('/:gameId', async (req, res) => {
     try {
+        console.log(req.params.gameId)
       const game = await Game.findById(req.params.gameId);
       if (game.owner.equals(req.session.user._id)) {
         await game.deleteOne();
-        res.redirect('/games');
+        res.redirect('/game');
       } else {
         res.send("You don't have permission to do that.");
       }
@@ -74,7 +74,7 @@ router.get('/:gameId', async (req, res) => {
       const currentGame = await Game.findById(req.params.gameId);
       if (currentGame.owner.equals(req.session.user._id)) {
         await currentGame.updateOne(req.body);
-        res.redirect('/games');
+        res.redirect('/game');
       } else {
         res.send("You don't have permission to do that.");
       }
