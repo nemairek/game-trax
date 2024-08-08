@@ -10,10 +10,14 @@
     <h1>Games</h1>
     <ul>
     <% games.forEach(game => {%>
-        <li><%= game.name %>
-             <%= game.genre %>
+        <li>
+            <%= game.name %>
+            <%= game.genre %>
             <%= game.publishedYear %>
             <%= game.status %>
+            <a href="/game/<%= game._id %>">View more details.</a>
+            <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete Game</button>
         </li>
        
    <% }); %>

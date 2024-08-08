@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= game.name %></title>
+  </head>
+  <body>
+  
+
+    <h1>This is <%= game.name %></h1>
+
+    <h2>Details</h2>
+    <p>Genre: <%= game.genre %></p>
+    <p>Release Date: <%= game.publishedYear %></p>
+    <p>Status: <%= game.status %></p>
+    <form action="/game/<%= game._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Game</button>
+    </form>
+  </body>
+</html>
