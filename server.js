@@ -3,7 +3,7 @@ dotenv.config();
 const express = require("express");
 const app = express();
 const session = require('express-session');
-
+const path = require('path')
 
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
@@ -36,6 +36,8 @@ app.use(
     })
 
 );
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.get("/", async (req,res) => {
     res.render("index.ejs", { user: req.session.user })
 })

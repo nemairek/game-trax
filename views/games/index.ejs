@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Games</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <h1>Games</h1>
+    <ul>
     <% games.forEach(game => {%>
-        <%= game.name %>
-        <%= game.genre %>
-        <%= game.publishedYear %>
-        <%= game.status %>
+        <li><%= game.name %>
+             <%= game.genre %>
+            <%= game.publishedYear %>
+            <%= game.status %>
+        </li>
+       
    <% }); %>
+    </ul>
 
   </body>
 </html>

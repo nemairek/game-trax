@@ -4,6 +4,8 @@ const router = express.Router();
 const User = require('../models/user.js');
 const Game = require('../models/game');
 
+const filterUser = 
+
 router.get("/", async (req, res) => {
 let gamesArray = await Game.find({})
 console.log(gamesArray)
@@ -21,5 +23,12 @@ router.post("/", async (req, res) => {
     await Game.create(req.body);
     res.redirect("/")
 })
+
+router.get("/edit", (req, res) => {
+    res.render("games/edit.ejs")
+});
+
+
+
 
 module.exports = router;
