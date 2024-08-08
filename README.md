@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-  <img src="https://static.vecteezy.com/system/resources/previews/000/508/982/original/comic-book-page-background-with-radial-halftone-effects-and-rays-in-pop-art-style-blank-template-in-green-yellow-blue-and-red-colors-vector.jpg" width="800" height="400">
+  <img src=https://pm1.aminoapps.com/6832/9f5f82bd29c7174aef24b76529ea3b0599913a91v2_hq.jpg width="800" height="400">
 
 </div>
 
@@ -8,7 +8,7 @@
 
   # Game-Trax
 
-  ### [CLICK TO DEMO](https://nemairek.github.io/SIMON/)
+  ### [CLICK TO DEMO](https://game-trax-5085ddcbb9e3.herokuapp.com/)
 
   ##### Kuziva Nemaire
 
