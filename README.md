@@ -42,16 +42,16 @@
 
 <details open>
  <summary> Planning </summary>
-  <a href="https://trello.com/b/0Ge4XDzK/simon-planning"
-    > "https://trello.com/b/0Ge4XDzK/simon-planning </a
+  <a href="https://trello.com/b/4jgM3Qb3/record-of-games"
+    > https://trello.com/b/4jgM3Qb3/record-of-games </a
   >
 
 </details>
 
 <details open>
   <summary> Deployed Link (SIMON) </summary>
-  <a href="https://nemairek.github.io/SIMON/"
-    > https://nemairek.github.io/SIMON/ </a
+  <a href="https://game-trax-5085ddcbb9e3.herokuapp.com/"
+    > https:https://game-trax-5085ddcbb9e3.herokuapp.com/ </a
   >
 </details>
 
