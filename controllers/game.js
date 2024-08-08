@@ -27,10 +27,6 @@ router.post("/", async (req, res) => {
     res.redirect("/")
 })
 
-router.get("/edit", (req, res) => {
-    res.render("games/edit.ejs")
-});
-
 router.get('/:gameId', async (req, res) => {
     try {
         const populatedGames = await Game.findById(
@@ -61,6 +57,31 @@ router.get('/:gameId', async (req, res) => {
     }
   });
 
+  router.get('/:gameId/edit', async (req, res) => {
+    try {
+      const currentGame = await Game.findById(req.params.gameId);
+      res.render('games/edit.ejs', {
+        game: currentGame,
+      });
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
 
+  router.put('/:gameId', async (req, res) => {
+    try {
+      const currentGame = await Game.findById(req.params.gameId);
+      if (currentGame.owner.equals(req.session.user._id)) {
+        await currentGame.updateOne(req.body);
+        res.redirect('/games');
+      } else {
+        res.send("You don't have permission to do that.");
+      }
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
 
 module.exports = router;
