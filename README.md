@@ -22,7 +22,8 @@
   ## :camera_flash: Screenshot
 
  <img src =
-    ![alt text](image-1.png)
+    ![alt text](![image](https://github.com/user-attachments/assets/64bd0632-7e1b-44a1-a8bf-a83771646bfa)
+)
   />
  
   ## :computer: Technologies Used
@@ -56,8 +57,8 @@
 
 ## :satellite: Upcoming Features
 
-- [:x:] Improve/ Reassign button sound effects
+- [:x:] Add description feature
 
-- [:x:] add a highscore function
+- [:x:] include database of existing games to choose and add from
 
 - [:x:] possible redesign of layout
