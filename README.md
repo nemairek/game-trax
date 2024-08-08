@@ -22,8 +22,8 @@
   ## :camera_flash: Screenshot
 
  <img src =
-    ![alt text](![image](https://github.com/user-attachments/assets/64bd0632-7e1b-44a1-a8bf-a83771646bfa)
-)
+    (![image](https://github.com/user-attachments/assets/64bd0632-7e1b-44a1-a8bf-a83771646bfa)
+
   />
  
   ## :computer: Technologies Used
