@@ -6,7 +6,7 @@
 
   <div id="description" align="center">
 
-  # SIMON
+  # Game-Trax
 
   ### [CLICK TO DEMO](https://nemairek.github.io/SIMON/)
 
