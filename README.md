@@ -30,7 +30,7 @@
 
   
   ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
-  ![Node.js](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
+  ![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=html5)
   ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
   ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
   ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
