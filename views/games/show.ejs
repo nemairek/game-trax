@@ -11,15 +11,15 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
 
-    <h1>This is <%= game.name %></h1>
+    <h1 id="dhead"><%= game.name %></h1>
 
-    <h2>Details</h2>
-    <a href="/game/<%= game._id %>/edit">Edit</a>
-    <p>Genre: <%= game.genre %></p>
-    <p>Release Date: <%= game.publishedYear %></p>
-    <p>Status: <%= game.status %></p>
-    <form action="/game/<%= game._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Game</button>
+    <h2 id="details">Details</h2>
+    <a href="/game/<%= game._id %>/edit" id="display">Edit</a>
+    <p id="display">Genre: <%= game.genre %></p>
+    <p id="display">Release Date: <%= game.publishedYear %></p>
+    <p id="display">Status: <%= game.status %></p>
+    <form action="/game/<%= game._id %>?_method=DELETE" method="POST" id="display">
+        <button type="submit" id="display">Delete Game</button>
     </form>
   </body>
 </html>
