@@ -9,21 +9,36 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Games</h1>
-    <ul>
-    <% games.forEach(game => {%>
-        <li>
-            <%= game.name %>
-            <%= game.genre %>
-            <%= game.publishedYear %>
-            <%= game.status %>
-            <a href="/game/<%= game._id %>">View more details.</a>
-            <form action="/game/<%= game._id %>?_method=DELETE" method="POST">
-                <button type="submit">Delete Game</button>
-            </form>
-        </li>
-       
-   <% }); %>
-    </ul>
+    <table>
+
+        <thead>
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">genre</th>
+                <th scope="col">publishedYear</th>
+                <th scope="col">status</th>
+                <th scope="col">view details</th>
+                <th scope="col">delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% games.forEach(game => {%>
+            <tr>
+                <th scope="row"><%= game.name %></th>
+                <td><%= game.genre %></td>
+                <td><%= game.publishedYear %></td>
+                <td><%= game.status %></td>
+                <td> <a href="/game/<%= game._id %>">View more details.</a></td>
+                <td> <form action="/game/<%= game._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete Game</button>
+                    </form>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+
+  
+    </table>
 
   </body>
 </html>

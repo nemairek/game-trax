@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Games</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add New Game</h1>
 
-    <form action="/game" method="POST">
+    <form action="/game" method="POST" class="newForm">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
         <label for="genre">Genre:</label>
