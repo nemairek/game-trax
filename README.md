@@ -22,7 +22,8 @@
   ## :camera_flash: Screenshot
 
  <img src =
-    ![image](https://github.com/user-attachments/assets/da63ef8b-fcc3-4949-a28a-faad63ecdacf)
+    ![image](https://github.com/user-attachments/assets/a145da44-5da3-45c4-b02e-b959b7e088d9)
+
 
 
   />
