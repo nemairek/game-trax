@@ -10,7 +10,6 @@ const Game = require('../models/game');
 router.get("/", async (req, res) => {
 const ownerId = req.session.user._id;
 let gamesArray = await Game.find({ owner: ownerId }).populate('owner')
-console.log(gamesArray)
     res.render("games/index.ejs", {
         games: gamesArray
     })
@@ -43,7 +42,6 @@ router.get('/:gameId', async (req, res) => {
 
   router.delete('/:gameId', async (req, res) => {
     try {
-        console.log(req.params.gameId)
       const game = await Game.findById(req.params.gameId);
       if (game.owner.equals(req.session.user._id)) {
         await game.deleteOne();
