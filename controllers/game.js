@@ -35,7 +35,6 @@ router.get('/:gameId', async (req, res) => {
           game: populatedGames,
         });
       } catch (error) {
-        console.log(error);
         res.redirect('/');
       }
   });
@@ -50,7 +49,6 @@ router.get('/:gameId', async (req, res) => {
         res.send("You don't have permission to do that.");
       }
     } catch (error) {
-      console.error(error);
       res.redirect('/');
     }
   });
@@ -62,7 +60,6 @@ router.get('/:gameId', async (req, res) => {
         game: currentGame,
       });
     } catch (error) {
-      console.log(error);
       res.redirect('/');
     }
   });
@@ -77,7 +74,6 @@ router.get('/:gameId', async (req, res) => {
         res.send("You don't have permission to do that.");
       }
     } catch (error) {
-      console.log(error);
       res.redirect('/');
     }
   });
